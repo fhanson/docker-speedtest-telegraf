@@ -8,8 +8,4 @@ services:
       - REMOTE_WRITE_ENDPOINT
       - METRICS_INSTANCE_ID
       - GRAFANA_API_KEY
-
-    volumes:
-      - ./inputs.speedtest.conf:/etc/telegraf/telegraf.d/inputs.speedtest.conf
-      - ./outputs.grafana.conf:/etc/telegraf/telegraf.d/outputs.grafana.conf
-      - ./telegraf.conf:/etc/telegraf/telegraf.conf
+      - CHECK_INTERVAL=30m
